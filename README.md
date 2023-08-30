@@ -101,22 +101,22 @@ Automated findings output for the audit can be found [here](https://github.com/c
 ## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
-- How many contracts are in scope?:   
-- Total SLoC for these contracts?:  
-- How many external imports are there?:  
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  
-- Does most of your code generally use composition or inheritance?:   
-- How many external calls?:   
-- What is the overall line coverage percentage provided by your tests?:
-- Is this an upgrade of an existing system?:
-- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:   
-- Please describe required context:   
-- Does it use an oracle?:  
-- Describe any novel or unique curve logic or mathematical models your code uses: 
-- Is this either a fork of or an alternate implementation of another project?:   
-- Does it use a side-chain?:
-- Describe any specific areas you would like addressed:
+- How many contracts are in scope?:   4
+- Total SLoC for these contracts?:  1024
+- How many external imports are there?: 3 
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  2
+- Does most of your code generally use composition or inheritance?:   Composition
+- How many external calls?:   5
+- What is the overall line coverage percentage provided by your tests?: 80%
+- Is this an upgrade of an existing system?: True
+- Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): ERC-20 Token, Non ERC-20 Token
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  False 
+- Please describe required context:   n/a
+- Does it use an oracle?:  No
+- Describe any novel or unique curve logic or mathematical models your code uses: none
+- Is this either a fork of or an alternate implementation of another project?: False  
+- Does it use a side-chain?: False
+- Describe any specific areas you would like addressed: Please focus on registry correctness as that intersects with the marketplace
 ```
 
 # Tests
