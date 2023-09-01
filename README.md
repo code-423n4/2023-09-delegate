@@ -87,9 +87,9 @@ Automated findings output for the audit can be found [here](https://github.com/c
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
 | [lib/delegate-registry/src/DelegateRegistry.sol](lib/delegate-registry/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
-| [lib/delegate-registry/src/libraries/RegistryHashes.sol](lib/delegate-registry/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
-| [lib/delegate-registry/src/libraries/RegistryStorage.sol](lib/delegate-registry/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
-| [lib/delegate-registry/src/libraries/RegistryOps.sol](lib/delegate-registry/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
+| [lib/delegate-registry/src/libraries/RegistryHashes.sol](lib/delegate-registry/src/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
+| [lib/delegate-registry/src/libraries/RegistryStorage.sol](lib/delegate-registry/src/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
+| [lib/delegate-registry/src/libraries/RegistryOps.sol](lib/delegate-registry/src/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
 | [src/DelegateToken.sol](src/DelegateToken.sol) | 288 | Represent delegate rights as a transferrable ERC721 | ??? |
 | [src/PrincipalToken.sol](src/PrincipalToken.sol) | 43 | Represent the rights to claim the deposited token as a transferrable ERC721 | ??? |
 | [src/CreateOfferer.sol](src/CreateOfferer.sol) | 171 | Seaport Contract Offerer to enable gasless listings of DTs before they're created | ??? |
