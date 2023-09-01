@@ -2,7 +2,6 @@
 pragma solidity ^0.8.21;
 
 import {Test} from "forge-std/Test.sol";
-import {console2} from "forge-std/console2.sol";
 import {DelegateRegistry} from "src/DelegateRegistry.sol";
 import {IDelegateRegistry} from "src/IDelegateRegistry.sol";
 
@@ -77,10 +76,10 @@ contract DelegateRegistryTest is Test {
         // Approve
         emit log_bytes(abi.encodePacked(amount, rights, delegate, vault, contract_));
         vm.startPrank(vault);
-        reg.delegateERC20(delegate, contract_, amount, rights, true);
+        reg.delegateERC20(delegate, contract_, rights, amount);
         assertEq(reg.checkDelegateForERC20(delegate, vault, contract_, rights), amount);
         // Revoke
-        reg.delegateERC20(delegate, contract_, amount, rights, false);
+        reg.delegateERC20(delegate, contract_, rights, 0);
         assertEq(reg.checkDelegateForERC20(delegate, vault, contract_, rights), 0);
     }
 
@@ -88,10 +87,10 @@ contract DelegateRegistryTest is Test {
         vm.assume(vault != address(0) && vault != address(1));
         // Approve
         vm.startPrank(vault);
-        reg.delegateERC1155(delegate, contract_, tokenId, amount, rights, true);
+        reg.delegateERC1155(delegate, contract_, tokenId, rights, amount);
         assertEq(reg.checkDelegateForERC1155(delegate, vault, contract_, tokenId, rights), amount);
         // Revoke
-        reg.delegateERC1155(delegate, contract_, tokenId, amount, rights, false);
+        reg.delegateERC1155(delegate, contract_, tokenId, rights, 0);
         assertEq(reg.checkDelegateForERC1155(delegate, vault, contract_, tokenId, rights), 0);
     }
 
@@ -107,7 +106,7 @@ contract DelegateRegistryTest is Test {
         assertEq(info[0].to, delegate0);
         assertEq(info[1].from, vault);
         assertEq(info[1].to, delegate1);
-        // Remove
+        // Revoke
         reg.delegateAll(delegate0, rights, false);
         info = reg.getOutgoingDelegations(vault);
         assertEq(info.length, 1);
@@ -156,21 +155,21 @@ contract DelegateRegistryTest is Test {
         reg.delegateAll(delegate0, rights, true);
         reg.delegateContract(delegate0, contract0, rights, true);
         reg.delegateERC721(delegate0, contract0, tokenId0, rights, true);
-        reg.delegateERC20(delegate0, contract0, amount0, rights, true);
-        reg.delegateERC1155(delegate0, contract0, tokenId0, amount0, rights, true);
+        reg.delegateERC20(delegate0, contract0, rights, amount0);
+        reg.delegateERC1155(delegate0, contract0, tokenId0, rights, amount0);
         reg.delegateAll(delegate1, rights, true);
         reg.delegateContract(delegate1, contract1, rights, true);
         reg.delegateERC721(delegate1, contract1, tokenId1, rights, true);
-        reg.delegateERC20(delegate1, contract1, amount1, rights, true);
-        reg.delegateERC1155(delegate1, contract1, tokenId1, amount1, rights, true);
+        reg.delegateERC20(delegate1, contract1, rights, amount1);
+        reg.delegateERC1155(delegate1, contract1, tokenId1, rights, amount1);
 
         // vault1 delegates all five tiers to delegate0
         changePrank(vault1);
         reg.delegateAll(delegate0, rights, true);
         reg.delegateContract(delegate0, contract0, rights, true);
         reg.delegateERC721(delegate0, contract0, tokenId0, rights, true);
-        reg.delegateERC20(delegate0, contract0, amount0, rights, true);
-        reg.delegateERC1155(delegate0, contract0, tokenId0, amount0, rights, true);
+        reg.delegateERC20(delegate0, contract0, rights, amount0);
+        reg.delegateERC1155(delegate0, contract0, tokenId0, rights, amount0);
 
         // vault0 revokes all three tiers for delegate0, check incremental decrease in delegate enumerations
         changePrank(vault0);
@@ -186,10 +185,10 @@ contract DelegateRegistryTest is Test {
         reg.delegateERC721(delegate0, contract0, tokenId0, rights, false);
         assertEq(reg.getIncomingDelegations(delegate0).length, 7);
         assertEq(reg.getIncomingDelegationHashes(delegate0).length, 7);
-        reg.delegateERC20(delegate0, contract0, amount0, rights, false);
+        reg.delegateERC20(delegate0, contract0, rights, 0);
         assertEq(reg.getIncomingDelegations(delegate0).length, 6);
         assertEq(reg.getIncomingDelegationHashes(delegate0).length, 6);
-        reg.delegateERC1155(delegate0, contract0, tokenId0, amount0, rights, false);
+        reg.delegateERC1155(delegate0, contract0, tokenId0, rights, 0);
         assertEq(reg.getIncomingDelegations(delegate0).length, 5);
         assertEq(reg.getIncomingDelegationHashes(delegate0).length, 5);
 
@@ -198,8 +197,8 @@ contract DelegateRegistryTest is Test {
         reg.delegateAll(delegate0, rights, true);
         reg.delegateContract(delegate0, contract0, rights, true);
         reg.delegateERC721(delegate0, contract0, tokenId0, rights, true);
-        reg.delegateERC20(delegate0, contract0, amount0, rights, true);
-        reg.delegateERC1155(delegate0, contract0, tokenId0, amount0, rights, true);
+        reg.delegateERC20(delegate0, contract0, rights, amount0);
+        reg.delegateERC1155(delegate0, contract0, tokenId0, rights, amount0);
         assertEq(reg.getIncomingDelegations(delegate0).length, 10);
         assertEq(reg.getIncomingDelegations(delegate1).length, 5);
         assertEq(reg.getIncomingDelegationHashes(delegate0).length, 10);
@@ -211,11 +210,12 @@ contract DelegateRegistryTest is Test {
         vm.assume(vault != delegate0 && vault != delegate1);
         vm.assume(delegate0 != delegate1);
         vm.assume(contract0 != contract1);
+        vm.assume(amount != 0);
         vm.startPrank(vault);
         reg.delegateAll(delegate0, rights, true);
         reg.delegateContract(delegate0, contract0, rights, true);
         reg.delegateERC721(delegate0, contract1, tokenId, rights, true);
-        reg.delegateERC20(delegate0, contract1, amount, rights, true);
+        reg.delegateERC20(delegate0, contract1, rights, amount);
         reg.delegateAll(delegate1, rights, true);
         reg.delegateContract(delegate1, contract0, rights, true);
 
@@ -234,9 +234,9 @@ contract DelegateRegistryTest is Test {
             uint256 tokenId = uint256(keccak256(abi.encode("tokenId", i)));
             reg.delegateAll(delegate, rights, true);
             reg.delegateContract(delegate, contract_, rights, true);
-            reg.delegateERC20(delegate, contract_, amount, rights, true);
+            reg.delegateERC20(delegate, contract_, rights, amount);
             reg.delegateERC721(delegate, contract_, tokenId, rights, true);
-            reg.delegateERC1155(delegate, contract_, tokenId, amount, rights, true);
+            reg.delegateERC1155(delegate, contract_, tokenId, rights, amount);
         }
     }
 
@@ -252,5 +252,28 @@ contract DelegateRegistryTest is Test {
         _createUniqueDelegations(0, hashesLimit);
         bytes32[] memory vaultDelegationHashes = reg.getOutgoingDelegationHashes(address(this));
         assertEq(vaultDelegationHashes.length, 5 * hashesLimit);
+    }
+
+    function testSweep(address to, address contract_, uint256 tokenId, uint256 amount, bytes32 rights_, bool enable) public {
+        address sc = address(0);
+        uint256 regBalanceBefore = address(reg).balance;
+        uint256 scBalanceBefore = address(sc).balance;
+        bytes[] memory data = new bytes[](1);
+        data[0] = abi.encodeWithSelector(reg.delegateAll.selector, to, rights_, enable);
+        reg.multicall{value: 0.2 ether}(data);
+        assertEq(regBalanceBefore + 0.2 ether, address(reg).balance);
+        reg.delegateAll{value: 0.2 ether}(to, rights_, enable);
+        assertEq(regBalanceBefore + 0.4 ether, address(reg).balance);
+        reg.delegateContract{value: 0.2 ether}(to, contract_, rights_, enable);
+        assertEq(regBalanceBefore + 0.6 ether, address(reg).balance);
+        reg.delegateERC721{value: 0.2 ether}(to, contract_, tokenId, rights_, enable);
+        assertEq(regBalanceBefore + 0.8 ether, address(reg).balance);
+        reg.delegateERC20{value: 0.1 ether}(to, contract_, rights_, amount);
+        assertEq(regBalanceBefore + 0.9 ether, address(reg).balance);
+        reg.delegateERC1155{value: 0.1 ether}(to, contract_, tokenId, rights_, amount);
+        assertEq(regBalanceBefore + 1 ether, address(reg).balance);
+        reg.sweep();
+        assertEq(address(reg).balance, 0);
+        assertEq(scBalanceBefore + 1 ether, sc.balance);
     }
 }

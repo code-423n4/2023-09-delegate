@@ -81,12 +81,12 @@ contract GasBenchmark is Test {
         registry.checkDelegateForERC721(delegations[2].to, vault, delegations[2].contract_, delegations[2].tokenId, "fakeRights");
         // Benchmark delegate erc20 and check erc20
         registry = new Registry();
-        registry.delegateERC20(delegations[3].to, delegations[3].contract_, delegations[3].amount, delegations[3].rights, true);
+        registry.delegateERC20(delegations[3].to, delegations[3].contract_, delegations[3].rights, delegations[3].amount);
         registry.checkDelegateForERC20(delegations[3].to, vault, delegations[3].contract_, delegations[3].rights);
         registry.checkDelegateForERC20(delegations[3].to, vault, delegations[3].contract_, "fakeRights");
         // Benchmark delegate erc1155 and check erc1155
         registry = new Registry();
-        registry.delegateERC1155(delegations[4].to, delegations[4].contract_, delegations[4].tokenId, delegations[4].amount, delegations[4].rights, true);
+        registry.delegateERC1155(delegations[4].to, delegations[4].contract_, delegations[4].tokenId, delegations[4].rights, delegations[4].amount);
         registry.checkDelegateForERC1155(delegations[4].to, vault, delegations[4].contract_, delegations[4].tokenId, delegations[4].rights);
         registry.checkDelegateForERC1155(delegations[4].to, vault, delegations[4].contract_, delegations[4].tokenId, "fakeRights");
         // Benchmark multicall
@@ -95,24 +95,12 @@ contract GasBenchmark is Test {
         multicallDelegations = _createDelegations(keccak256(abi.encode(seed, "multicall")));
         bytes[] memory data = new bytes[](5);
         data[0] = abi.encodeWithSelector(IRegistry.delegateAll.selector, multicallDelegations[0].to, multicallDelegations[0].rights, true);
-        data[1] = abi.encodeWithSelector(
-            IRegistry.delegateContract.selector, multicallDelegations[1].to, multicallDelegations[1].contract_, multicallDelegations[1].rights, true
-        );
+        data[1] = abi.encodeWithSelector(IRegistry.delegateContract.selector, multicallDelegations[1].to, multicallDelegations[1].contract_, multicallDelegations[1].rights, true);
         data[2] = abi.encodeWithSelector(
-            IRegistry.delegateERC721.selector,
-            multicallDelegations[2].to,
-            multicallDelegations[2].contract_,
-            multicallDelegations[2].tokenId,
-            multicallDelegations[2].rights,
-            true
+            IRegistry.delegateERC721.selector, multicallDelegations[2].to, multicallDelegations[2].contract_, multicallDelegations[2].tokenId, multicallDelegations[2].rights, true
         );
         data[3] = abi.encodeWithSelector(
-            IRegistry.delegateERC20.selector,
-            multicallDelegations[3].to,
-            multicallDelegations[3].contract_,
-            multicallDelegations[3].amount,
-            multicallDelegations[3].rights,
-            true
+            IRegistry.delegateERC20.selector, multicallDelegations[3].to, multicallDelegations[3].contract_, multicallDelegations[3].amount, multicallDelegations[3].rights, true
         );
         data[4] = abi.encodeWithSelector(
             IRegistry.delegateERC1155.selector,

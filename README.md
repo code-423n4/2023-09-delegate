@@ -86,11 +86,22 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
+| [src/DelegateToken.sol](src/DelegateToken.sol) | ??? | Represent delegate rights as a transferrable ERC721 | ??? |
+| [src/PrincipalToken.sol](src/PrincipalToken.sol) | ??? | Represent the rights to claim the deposited token as a transferrable ERC721 | ??? |
+| [src/CreateOfferer.sol](src/CreateOfferer.sol) | ??? | Seaport Contract Offerer to enable gasless listings of DTs before they're created | ??? |
+| [lib/delegate-registry/src/DelegateRegistry.sol](lib/delegate-registry/src/DelegateRegistry.sol) | ??? | v2 of the delegate registry | ??? |
+
 | [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
 ## Out of scope
 
 *List any files/contracts that are out of scope for this audit.*
+The following contracts are out of scope:
+- Any deployment or upgrade scripts are out of scope (but can be used to test the contracts in scope).
+- Files in test/, contracts/test/ or src/test/ are out of scope (but can be used to test the contracts in scope).
+- External libraries (@openzeppelin/*)
+- [src/MarketMetadata.sol](src/MarketMetadata.sol)
+- [lib/delegate-registry/src/singlesig/Singlesig.sol](lib/delegate-registry/src/singlesig/Singlesig.sol)
 
 # Additional Context
 

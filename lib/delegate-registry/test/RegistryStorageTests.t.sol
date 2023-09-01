@@ -2,8 +2,6 @@
 pragma solidity ^0.8.21;
 
 import {Test} from "forge-std/Test.sol";
-import {console2} from "forge-std/console2.sol";
-import {IDelegateRegistry as IRegistry} from "src/IDelegateRegistry.sol";
 import {RegistryStorage as Storage} from "src/libraries/RegistryStorage.sol";
 import {RegistryHarness as Harness} from "./tools/RegistryHarness.sol";
 
@@ -27,8 +25,9 @@ contract RegistryStorageTests is Test {
     function testStorageConstants() public {
         assertEq(Storage.CLEAN_ADDRESS, uint256(type(uint160).max));
         assertEq(Storage.CLEAN_FIRST8_BYTES_ADDRESS, uint256(type(uint64).max) << 96);
-        assertEq(Storage.CLEAN_LAST12_BYTES_ADDRESS, uint256(type(uint96).max));
         assertEq(Storage.CLEAN_PACKED8_BYTES_ADDRESS, uint256(type(uint64).max) << 160);
+        assertEq(Storage.DELEGATION_EMPTY, address(0));
+        assertEq(Storage.DELEGATION_REVOKED, address(1));
     }
 
     /// @dev Check that pack addresses works as intended
