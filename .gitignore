@@ -103,3 +103,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+cache/
+out/
+broadcast/
+.DS_Store
+.vscode
