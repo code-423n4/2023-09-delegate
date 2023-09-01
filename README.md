@@ -49,7 +49,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 ---
 
 # Delegate audit details
-- Total Prize Pool: $36,500 USDC
+- Total Prize Pool: $50,000 USDC
   - HM awards: $24,750 USDC
   - Analysis awards: $1,500 USDC
   - QA awards: $750 USDC
@@ -62,7 +62,7 @@ Under "SPONSORS ADD INFO HERE" heading below, include the following:
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-09-delegate/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts September 5, 2023 20:00 UTC
-- Ends September 8, 2023 20:00 UTC
+- Ends September 11, 2023 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
