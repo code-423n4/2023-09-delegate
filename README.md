@@ -37,18 +37,18 @@ The delegate marketplace consists of three core contracts: the DelegateToken, th
 
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [lib/delegate-registry/src/DelegateRegistry.sol](lib/delegate-registry/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
-| [lib/delegate-registry/src/libraries/RegistryHashes.sol](lib/delegate-registry/src/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
-| [lib/delegate-registry/src/libraries/RegistryStorage.sol](lib/delegate-registry/src/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
-| [lib/delegate-registry/src/libraries/RegistryOps.sol](lib/delegate-registry/src/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
-| [src/DelegateToken.sol](src/DelegateToken.sol) | 288 | Represent delegate rights as a transferrable ERC721 | ??? |
-| [src/PrincipalToken.sol](src/PrincipalToken.sol) | 43 | Represent the rights to claim the deposited token as a transferrable ERC721 | ??? |
-| [src/CreateOfferer.sol](src/CreateOfferer.sol) | 171 | Seaport Contract Offerer to enable gasless listings of DTs before they're created | ??? |
-| [src/libraries/CreateOffererLib.sol](src/libraries/CreateOffererLib.sol) | 267 | Helper library for CreateOfferer | ??? |
-| [src/libraries/DelegateTokenLib.sol](src/libraries/DelegateTokenLib.sol) | 90 | Helper library for DelegateToken | ??? |
-| [src/libraries/DelegateTokenRegistryHelpers.sol](src/libraries/DelegateTokenRegistryHelpers.sol) | 219 | Helper library for Delegate Token registry hitchhiking | ??? |
-| [src/libraries/DelegateTokenStorageHelpers.sol](src/libraries/DelegateTokenStorageHelpers.sol) | 125 | Helper library for Delegate Token registry hitchhiking | ??? |
-| [src/libraries/DelegateTokenTransferHelpers.sol](src/libraries/DelegateTokenTransferHelpers.sol) | 73 | Helper library for Delegate Token ERC20/721/1155 transfers | ??? |
+| [lib/delegate-registry/src/DelegateRegistry.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
+| [lib/delegate-registry/src/libraries/RegistryHashes.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
+| [lib/delegate-registry/src/libraries/RegistryStorage.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
+| [lib/delegate-registry/src/libraries/RegistryOps.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
+| [src/DelegateToken.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/DelegateToken.sol) | 288 | Represent delegate rights as a transferrable ERC721 | ??? |
+| [src/PrincipalToken.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/PrincipalToken.sol) | 43 | Represent the rights to claim the deposited token as a transferrable ERC721 | ??? |
+| [src/CreateOfferer.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/CreateOfferer.sol) | 171 | Seaport Contract Offerer to enable gasless listings of DTs before they're created | ??? |
+| [src/libraries/CreateOffererLib.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/libraries/CreateOffererLib.sol) | 267 | Helper library for CreateOfferer | ??? |
+| [src/libraries/DelegateTokenLib.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/libraries/DelegateTokenLib.sol) | 90 | Helper library for DelegateToken | ??? |
+| [src/libraries/DelegateTokenRegistryHelpers.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/libraries/DelegateTokenRegistryHelpers.sol) | 219 | Helper library for Delegate Token registry hitchhiking | ??? |
+| [src/libraries/DelegateTokenStorageHelpers.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/libraries/DelegateTokenStorageHelpers.sol) | 125 | Helper library for Delegate Token registry hitchhiking | ??? |
+| [src/libraries/DelegateTokenTransferHelpers.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/libraries/DelegateTokenTransferHelpers.sol) | 73 | Helper library for Delegate Token ERC20/721/1155 transfers | ??? |
 
 ## Out of scope
 
@@ -56,8 +56,8 @@ The following contracts are out of scope:
 - Any deployment or upgrade scripts are out of scope (but can be used to test the contracts in scope).
 - Files in test/, contracts/test/ or src/test/ are out of scope (but can be used to test the contracts in scope).
 - External libraries (@openzeppelin/*, @seaport/*)
-- [src/MarketMetadata.sol](src/MarketMetadata.sol)
-- [lib/delegate-registry/src/singlesig/Singlesig.sol](lib/delegate-registry/src/singlesig/Singlesig.sol)
+- [src/MarketMetadata.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/MarketMetadata.sol)
+- [lib/delegate-registry/src/singlesig/Singlesig.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/singlesig/Singlesig.sol)
 - lib/delegate-registry/src/examples/*.sol
 
 # Additional Context
