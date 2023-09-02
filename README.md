@@ -34,13 +34,13 @@ v1 of the delegate registry has been live across many EVM chains since September
 The delegate marketplace consists of three core contracts: the DelegateToken, the PrincipalToken, and the CreateOfferer. Users will deposit a token, such as a bored ape NFT, into smart contract escrow using the DelegateToken.sol::create() function. They will receive back two ERC721s: a bored ape DelegateToken, and a bored ape PrincipalToken. The holder of the DelegateToken will receive delegate rights for the duration of the escrow. The holder of the PrincipalToken will have the right to redeem the bored ape from escrow at conclusion of the chosen timeframe. Users can choose to transfer or sell neither, one, or both of these. The CreateOfferer is a Seaport Contract Offerer that enables gasless listing of DelegateTokens which have not been created yet. If a buyer fulfills the gasless listing, then the desired token will be atomically escrowed and a DelegateToken created.
 
 # Scope
-
+https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
-| [lib/delegate-registry/src/DelegateRegistry.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
-| [lib/delegate-registry/src/libraries/RegistryHashes.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
-| [lib/delegate-registry/src/libraries/RegistryStorage.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
-| [lib/delegate-registry/src/libraries/RegistryOps.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
+| [lib/delegate-registry/src/DelegateRegistry.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
+| [lib/delegate-registry/src/libraries/RegistryHashes.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/libraries/RegistryHashes.sol) | 135 | Helper library for registry hash calculation | ??? |
+| [lib/delegate-registry/src/libraries/RegistryStorage.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/libraries/RegistryStorage.sol) | 31 | Helper library for registry storage layout | ??? |
+| [lib/delegate-registry/src/libraries/RegistryOps.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/libraries/RegistryOps.sol) | 18 | Helper library for branchless boolean ops | ??? |
 | [src/DelegateToken.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/DelegateToken.sol) | 288 | Represent delegate rights as a transferrable ERC721 | ??? |
 | [src/PrincipalToken.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/PrincipalToken.sol) | 43 | Represent the rights to claim the deposited token as a transferrable ERC721 | ??? |
 | [src/CreateOfferer.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/CreateOfferer.sol) | 171 | Seaport Contract Offerer to enable gasless listings of DTs before they're created | ??? |
@@ -57,7 +57,7 @@ The following contracts are out of scope:
 - Files in test/, contracts/test/ or src/test/ are out of scope (but can be used to test the contracts in scope).
 - External libraries (@openzeppelin/*, @seaport/*)
 - [src/MarketMetadata.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/src/MarketMetadata.sol)
-- [lib/delegate-registry/src/singlesig/Singlesig.sol](https://github.com/code-423n4/2023-09-delegate/blob/main/lib/delegate-registry/src/singlesig/Singlesig.sol)
+- [lib/delegate-registry/src/singlesig/Singlesig.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/singlesig/Singlesig.sol)
 - lib/delegate-registry/src/examples/*.sol
 
 # Additional Context
