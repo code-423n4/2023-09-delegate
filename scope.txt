@@ -1,0 +1,12 @@
+lib/delegate-registry/src/DelegateRegistry.sol
+lib/delegate-registry/src/libraries/RegistryHashes.sol
+lib/delegate-registry/src/libraries/RegistryStorage.sol
+lib/delegate-registry/src/libraries/RegistryOps.sol
+src/DelegateToken.sol
+src/PrincipalToken.sol
+src/CreateOfferer.sol
+src/libraries/CreateOffererLib.sol
+src/libraries/DelegateTokenLib.sol
+src/libraries/DelegateTokenRegistryHelpers.sol
+src/libraries/DelegateTokenStorageHelpers.sol
+src/libraries/DelegateTokenTransferHelpers.sol

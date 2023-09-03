@@ -1,4 +1,5 @@
 # Delegate audit details
+
 - Total Prize Pool: $50,000 USDC
   - HM awards: ??? USDC
   - Analysis awards: ??? USDC
@@ -20,21 +21,21 @@ Automated findings output for the audit can be found [here](https://github.com/c
 
 *Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
 
-
 # Overview
 
 This contest covers two key pieces:
+
 - v2 of the delegate registry
 - v2 of the delegate marketplace
 
-The delegate registry is a standalone singleton database that aggregates onchain programmable access control. Users can link cold wallets to hot wallets, or specify individual token rights to delegate to other wallets. This separation of asset utility from the asset owner is a powerful primitive that enables the delegate marketplace. The delegate marketplace lets users wrap delegation rights into ERC721 tokens that can then be traded or transferred in the same way as any other NFT. The primary usecase here is utility rentals with zero counterparty risk, zero liquidation risk, zero overcollateralization requirements, and an order of magnitude greater capital efficiency.
+The delegate registry is a standalone singleton database that aggregates onchain programmable access control. Users can link cold wallets to hot wallets, or specify individual token rights to delegate to other wallets. This separation of asset utility from the asset owner is a powerful primitive that enables the delegate marketplace. The delegate marketplace lets users wrap delegation rights into ERC721 tokens that can then be traded or transferred in the same way as any other NFT. The primary use-case here is utility rentals with zero counterparty risk, zero liquidation risk, zero overcollateralization requirements, and an order of magnitude greater capital efficiency.
 
-v1 of the delegate registry has been live across many EVM chains since September 2022. While v1 is not in scope, auditors are encouraged to review its usage patterns at [https://etherscan.io/address/0x00000000000076a84fef008cdabe6409d2fe638b](https://etherscan.io/address/0x00000000000076a84fef008cdabe6409d2fe638b). A frontend interface across all deployed chains and testnets can be used at [https://delegate.xyz](https://delegate.xyz). The v2 registry is similar to v1, although with expanded support for fungible token amounts, cleaner enumeration methods, multicall transaction batching, gas efficiency improvements, and the introduction of subdelegation rights. Documentation for v1 can be found at [https://docs.delegate.xyz](https://docs.delegate.xyz). 
+v1 of the delegate registry has been live across many EVM chains since September 2022. While v1 is not in scope, auditors are encouraged to review its usage patterns at [https://etherscan.io/address/0x00000000000076a84fef008cdabe6409d2fe638b](https://etherscan.io/address/0x00000000000076a84fef008cdabe6409d2fe638b). A frontend interface across all deployed chains and testnets can be used at [https://delegate.xyz](https://delegate.xyz). The v2 registry is similar to v1, although with expanded support for fungible token amounts, cleaner enumeration methods, multicall transaction batching, gas efficiency improvements, and the introduction of subdelegation rights. Documentation for v1 can be found at [https://docs.delegate.xyz](https://docs.delegate.xyz).
 
 The delegate marketplace consists of three core contracts: the DelegateToken, the PrincipalToken, and the CreateOfferer. Users will deposit a token, such as a bored ape NFT, into smart contract escrow using the DelegateToken.sol::create() function. They will receive back two ERC721s: a bored ape DelegateToken, and a bored ape PrincipalToken. The holder of the DelegateToken will receive delegate rights for the duration of the escrow. The holder of the PrincipalToken will have the right to redeem the bored ape from escrow at conclusion of the chosen timeframe. Users can choose to transfer or sell neither, one, or both of these. The CreateOfferer is a Seaport Contract Offerer that enables gasless listing of DelegateTokens which have not been created yet. If a buyer fulfills the gasless listing, then the desired token will be atomically escrowed and a DelegateToken created.
 
 # Scope
-https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol
+
 | Contract | SLOC | Purpose | Libraries used |  
 | ----------- | ----------- | ----------- | ----------- |
 | [lib/delegate-registry/src/DelegateRegistry.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol) | 364 | v2 of the delegate registry | ??? |
@@ -53,6 +54,7 @@ https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b
 ## Out of scope
 
 The following contracts are out of scope:
+
 - Any deployment or upgrade scripts are out of scope (but can be used to test the contracts in scope).
 - Files in test/, contracts/test/ or src/test/ are out of scope (but can be used to test the contracts in scope).
 - External libraries (@openzeppelin/*, @seaport/*)
@@ -60,13 +62,8 @@ The following contracts are out of scope:
 - [lib/delegate-registry/src/singlesig/Singlesig.sol](https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/singlesig/Singlesig.sol)
 - lib/delegate-registry/src/examples/*.sol
 
-# Additional Context
+## Scoping Details
 
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
-
-*Sponsor, please confirm/edit the information below.*
-
-## Scoping Details 
 ```
 - If you have a public code repo, please share it here:  
 - How many contracts are in scope?:   12
@@ -87,14 +84,44 @@ The following contracts are out of scope:
 - Describe any specific areas you would like addressed: Please focus on registry correctness as that intersects with the marketplace
 ```
 
-# Tests
+## Setup
 
+Either clone with `--recurse`:
+
+```bash
+git clone --recurse https://github.com/code-423n4/2023-09-delegate.git
 ```
-forge install foundry-rs/forge-std@master openzeppelin/openzeppelin-contracts@release-v4.9 projectopensea/seaport@1.5 delegatexyz/delegate-registry@v2
+
+Use one of the following if `--recurse` was forgotten:
+
+```bash
+git submodule update --init --recursive
+forge install
+```
+
+Be sure to run `foundryup`:
+
+```bash
+foundryup
+```
+
+## Tests
+
+```bash
 # Run marketplace tests
 forge test
 # Run registry tests
 cd lib/delegate-registry && forge test && cd ../..
 # Run registry gas benchmarks
 cd lib/delegate-registry && forge test --match-contract GasBenchmark --gas-report > gasbenchmark10mil && forge test --match-contract HashBenchmark --gas-report > hashbenchmark10mil && cd ../..
+```
+
+## Slither
+
+To run Slither, use the following command:
+
+```bash
+mv test _test
+slither .
+mv _test test
 ```
