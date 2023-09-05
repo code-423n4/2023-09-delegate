@@ -5,7 +5,7 @@
   - Analysis awards: $2,075 USDC
   - QA awards: $1037.50 USDC
   - Bot Race awards: $3,112.50 USDC
-  - Gas awards: $$1037.50 USDC
+  - Gas awards: $1,037.50 USDC
   - Judge awards: $5,000 USDC
   - Lookout awards: $3,000 USDC
   - Scout awards: $500 USDC
