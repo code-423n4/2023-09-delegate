@@ -1,14 +1,14 @@
 # Delegate audit details
 
 - Total Prize Pool: $50,000 USDC
-  - HM awards: ??? USDC
-  - Analysis awards: ??? USDC
-  - QA awards: ??? USDC
-  - Bot Race awards: ??? USDC
-  - Gas awards: ??? USDC
-  - Judge awards: ??? USDC
-  - Lookout awards: ??? USDC
-  - Scout awards: ??? USDC
+  - HM awards: $34,237.50 USDC
+  - Analysis awards: $2,075 USDC
+  - QA awards: $1037.50 USDC
+  - Bot Race awards: $3,112.50 USDC
+  - Gas awards: $1037.50 USDC
+  - Judge awards: $5,000 USDC
+  - Lookout awards: $3,000 USDC
+  - Scout awards: $500 USDC
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-09-delegate/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
