@@ -1,11 +1,11 @@
 # Delegate audit details
 
 - Total Prize Pool: $50,000 USDC
-  - HM awards: $34,237.50 USDC
+  - HM awards: $35,275 USDC
   - Analysis awards: $2,075 USDC
   - QA awards: $1037.50 USDC
   - Bot Race awards: $3,112.50 USDC
-  - Gas awards: $1037.50 USDC
+  - Gas awards: $0 USDC
   - Judge awards: $5,000 USDC
   - Lookout awards: $3,000 USDC
   - Scout awards: $500 USDC
