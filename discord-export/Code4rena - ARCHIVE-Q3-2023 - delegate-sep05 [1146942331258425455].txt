@@ -1,0 +1,1401 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q3-2023 / delegate-sep05
+==============================================================
+
+[09/01/2023 00:12] kartoonjoy (pinned)
+👋 Hello and welcome to the audit channel for the **$50,000 USDC Delegate** audit!
+
+📆 Audit opens 09/05/2023 20:00 (20:00 UTC) and runs through 09/11/2023 20:00 (20:00 UTC) (6 days).
+
+Please give a warm welcome to the Delegate team, particularly @foobar and @mireynolds, who will be available for questions either here in the channel or via DM in the EST timezone(s).
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-09-delegate#top
+
+{Embed}
+https://code4rena.com/contests/2023-09-delegate
+Code4rena
+Code4rena is a competitive audit platform that finds more high-severity vulnerabilities, more quickly than any other auditing method.
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/c4-og-banner-7DE3A.png
+
+{Reactions}
+✅ (4) 
+
+[09/01/2023 00:12] kartoonjoy
+Pinned a message.
+
+
+[09/02/2023 06:19] 0xdalla
+6 days right ?
+
+{Reactions}
+thankyou (7) 
+
+[09/05/2023 10:27] 0xose
+@foobar just wondering if there's a similar service out there apart from those mentioned in the documentation 
+And also have you guys been audited before? if yes, where can i get the report?
+
+{Reactions}
+👆 
+
+[09/05/2023 11:39] daniel526
+Can't wait!
+
+
+[09/05/2023 14:30] foobar0x
+Delegate registry v1 has been live on a variety of EVM chains & testnets for about a year now, ~60k users. You can check it out at https://delegate.xyz/ and https://etherscan.io/address/0x00000000000076A84feF008CDAbe6409d2FE638B
+
+No public audit reports focused solely on it
+
+{Reactions}
+👍 (4) 
+
+[09/05/2023 14:30] foobar0x
+This contest covers v2 registry and marketplace, so not quite the same but lots of similarities between v1 and v2
+
+
+[09/05/2023 15:14] 0xarno
+Sloc for this contest ?
+
+
+[09/05/2023 15:19] kaveyjoe
+1024
+
+{Reactions}
+🫡 (6) 
+
+[09/05/2023 18:24] road220
+Pretty good podcast, loved it, check it out: 
+https://www.youtube.com/watch?v=QpkdUpZ_WLg
+
+{Embed}
+Crypto Pragmatist
+https://www.youtube.com/watch?v=QpkdUpZ_WLg
+0xFoobar: Delegate // The Crypto Pragmatist Podcast
+Check out Phemex here to be eligible for a part of a 100 ETH prize pool: https://phemex.com/a/k/JackNiewold
+
+For this podcast, we chat with ​Foobar of Delegate​. During this video, we cover:
+
+• Foobar's background
+• What problems hold crypto back
+• How we can build safer systems for crypto
+• Building immutable protocolsInfrastructure vs. Product...
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/maxresdefault-43465.jpg
+
+{Reactions}
+👍 
+
+[09/05/2023 20:11] illilli000
+@foobar is this contest for ethereum mainnet only?
+
+
+[09/05/2023 20:22] 0xose
+i believe the project is multichain
+
+
+[09/05/2023 20:24] illilli000
+trying to get sponsor confirmation for the bot race since the scoping details say `- Does it use a side-chain?: False`
+
+{Reactions}
+👍 
+
+[09/05/2023 20:24] 0xose
+okay, tag the devs
+
+
+[09/05/2023 22:14] foobar0x
+No, many EVM chains. Will note ahead of time that compatibility is not a concern even though we're using solidity 0.8.21; the paris EVM version does not include PUSH0 in the deployed bytecode
+
+{Reactions}
+thankyou (3) 
+
+[09/05/2023 22:33] airblockguard
+Does anyone know how to clone the whole repository? I have a few files that did not show up when I cloned this repo
+
+
+[09/05/2023 22:39] 0xose
+which file didn't show up?
+
+
+[09/05/2023 22:40] 0xose
+cloned the repo just fine here
+
+
+[09/05/2023 22:59] ahmedjb_45127
+git clone --recurse https://github.com/code-423n4/2023-09-delegate.git
+it's in the contest page
+
+{Embed}
+https://github.com/code-423n4/2023-09-delegate.git
+GitHub - code-423n4/2023-09-delegate
+Contribute to code-423n4/2023-09-delegate development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/af5c5aae-f3a9-44bf-9eca-38a3744e4582-49149
+
+
+[09/06/2023 01:25] bowtiedvirus
+Thankful for this codebase utilizing Foundry. So much easier to reason about.
+
+{Reactions}
+❤️ (7) 
+
+[09/06/2023 05:05] 0xhuy0512
+1822 SLOC now
+
+
+[09/06/2023 05:55] Banditx0x#5323
+what changed? 😿
+
+
+[09/06/2023 05:59] 0xhuy0512
+don't know man, ask the sponsor 💁‍♂️
+
+
+[09/06/2023 06:53] supernovahs
+Hii
+
+
+[09/06/2023 07:11] pfapostol
+lately, for some reason, all codebases on c4 are larger than in rsvp
+
+{Reactions}
+👍 
+
+[09/06/2023 08:14] 0xhuy0512
+this is a very good flow diagram I found in V1 docs
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/flow-delegate-4CAE7.jpg
+
+{Reactions}
+👍 (11) 
+
+[09/06/2023 08:55] Banditx0x#5323
+Hard to audit 300 SLOC a day
+
+{Reactions}
+👍 (5) 
+
+[09/06/2023 08:59] b353n
+Yea , with that low comments on code and docs .. its hard task
+
+
+[09/06/2023 09:37] rickardlarsson6
+Keep getting the same error:
+
+Message:  failed to extract foundry config:
+foundry config error: Unknown evm version: paris for setting `evm_version`
+
+Anyone knows how to fix this?
+
+
+[09/06/2023 09:41] parsely.
+Check in foundry.toml there is a setting, you can change that to one that might work, or perhaps first try `foundryup` command
+
+{Reactions}
+🫡 (2) 
+
+[09/06/2023 10:05] bean.eth2
+foundryup
+
+{Reactions}
+🫡 
+
+[09/06/2023 10:06] 0xose
+foundryup fixed this issue for me
+
+{Reactions}
+🫡 
+
+[09/06/2023 11:45] 0xhelium
+Can users deposits any tokens and mint delegate in return ? Or Can only deposit whitelisted tokens
+
+
+[09/06/2023 12:45] foobar0x (pinned)
+Yes, any tokens
+
+
+[09/06/2023 14:23] supernovahs
+@foobar dmed
+
+
+[09/06/2023 15:25] kartoonjoy
+Pinned a message.
+
+
+[09/06/2023 18:26] Message Wolf#0225 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Automated findings output for the audit can be found [here](https://gist.github.com/code423n4/b2b64c6a8265f8a3a7f724f67b8e49f9).
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+{Reactions}
+👀 (2) 
+
+[09/06/2023 18:33] thebrittfactor
+Pinned a message.
+
+
+[09/06/2023 20:32] Banditx0x#5323
+How do i understand this guys? :gummy_wink:
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/image-DD2D5.png
+
+{Reactions}
+😂 (16) 
+
+[09/06/2023 20:35] 0xstalin
+guide to understand that, step by step
+1. Prepare 2 litters of coffee
+2. Close the door of the room where you are working
+3. Make yourself comfortable
+4. Forget about the world for 3-4 hours and just navigate through the code, take notes, and ask questions
+
+At the end, you'll either understand it or your brain will ask you for a rest, if the latter, take a rest and then come back again and repeat, you'll eventually understand what that code does 🙂
+
+{Reactions}
+🤣 (20) 💯 (12) 10_10 (2) 👍 (5) 
+
+[09/06/2023 20:35] xyzbtchunt
+Ask Chat Gpt
+
+
+[09/06/2023 20:35] 0xstalin
+jokes aside, I'd break into pieces, first I'd focus on the logic of the ERC721, then the ERC20, and finally the ERC1155
+
+{Reactions}
+🔥 (6) 
+
+[09/06/2023 20:35] 0xnevi
+Typical day of auditing 🤣
+
+{Reactions}
+🫡 (4) 
+
+[09/06/2023 20:36] Banditx0x#5323
+I need to close window so i don't jump off balcony
+
+{Reactions}
+😂 (9) 
+
+[09/06/2023 20:36] 0xstalin
+go to da jim to spell out the bad mood :chefskiss:
+
+{Reactions}
+👍 (3) 
+
+[09/06/2023 22:16] 0xhelium
+Is there any documentation available ?
+
+
+[09/06/2023 22:17] fulum
+You have the docs on the website https://docs.delegate.xyz/delegate/
+
+{Embed}
+https://docs.delegate.xyz/delegate/
+Overview
+What is DelegateRegistry, who's using it, and how you can use it
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/KMp3PwjpKKfLzakTeUUs-03069.png
+
+
+[09/06/2023 22:17] jovi6132
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/spaces2FKMp3PwjpKKfLzakTeUUs2Fuploads2Fdbe-DB548.png
+
+{Reactions}
+🔥 (10) 
+
+[09/06/2023 22:17] jovi6132
+Such a beautiful diagram
+
+
+[09/06/2023 22:17] jovi6132
+Excalidraw ftw
+
+
+[09/06/2023 22:18] 0xhelium
+I'am def lazy on this one . Thanks
+
+{Reactions}
+😂 (2) 
+
+[09/06/2023 22:35] wisdomn_
+Hi @foobar  I noticed that DelegateRegistry.sol is in scope, but it isn't in the c4 repo used on the contest page. 
+C4 repo: 
+GitHub.com/code-423n4/2023-09-delegate
+
+I found it in a different repo
+GitHub.com/delegatexyz/delegate-registry
+
+If the file is in scope but it isn't listed in the repo used on your contest page. Should we consider it in scope or not?
+
+Contest page for context: 
+https://github.com/code-423n4/2023-09-delegate.git
+
+{Embed}
+https://github.com/code-423n4/2023-09-delegate.git
+GitHub - code-423n4/2023-09-delegate
+Contribute to code-423n4/2023-09-delegate development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/af5c5aae-f3a9-44bf-9eca-38a3744e4582-49149
+
+
+[09/06/2023 22:45] 0xstalin
+When you install the dependencies it will show up in the exact path that is listed in the Readme
+
+
+[09/06/2023 22:46] wisdomn_
+I just saw it now. Thanks @0xStalin
+
+
+[09/06/2023 22:46] amit1628
+might seem a vague doubt but request someone to answer it - over here in bot reports number 
+M-02
+File: src/libraries/DelegateTokenRegistryHelpers.sol
+
+// @audit uint256(IDelegateRegistry(delegateRegistry).readSlot(bytes32(uint256(RegistryHashes.location(registryHash)) + RegistryStorage.POSITIONS_AMOUNT))) - decreaseAmount
+122:                         uint256(IDelegateRegistry(delegateRegistry).readSlot(bytes32(uint256(RegistryHashes.location(registryHash)) + RegistryStorage.POSITIONS_AMOUNT))) - decreaseAmount;
+
+isnt there a overflow and undeflow check in solidity compiler 0.8
+
+
+[09/06/2023 23:13] zdravkohr
+Aren't they in an unchecked block?
+
+
+[09/06/2023 23:29] foobar0x
+It is in scope, just packed into a submodule for ease of running the tests. Can find it by clicking the link in the readme, or here: https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol
+
+{Embed}
+https://github.com/delegatexyz/delegate-registry/blob/6d1254de793ccc40134f9bec0b7cb3d9c3632bc1/src/DelegateRegistry.sol
+delegate-registry/src/DelegateRegistry.sol at 6d1254de793ccc40134f9...
+Contribute to delegatexyz/delegate-registry development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/delegate-registry-2151D
+
+
+[09/06/2023 23:30] 0xstalin
+@foobar Has the code of this contest been audited before?
+
+
+[09/06/2023 23:34] foobar0x
+If this were used in a variety of usecases then could be vulnerable but since the only calls to `calculateDecreasedAmount()` come from `transferERC20()` internal func in `DelegateTokenRegistryHelpers.sol` which is only called by `transferFrom()` in `DelegateToken.sol`, it will only subtract from a balance that is gte the amount being subtracted (since this is handling token transfers)
+
+{Reactions}
+👍 
+
+[09/06/2023 23:34] foobar0x
+No
+
+{Reactions}
+🫡 
+
+[09/07/2023 00:23] _oceansky
+This is simple yet very interesting project, kudos to the creator :chefskiss: . That's why I love web3 security, you can see a lot of beautiful ideas.
+
+{Reactions}
+❤️ (3) 💯 (3) 👍 (3) 
+
+[09/07/2023 01:05] wisdomn_
+I've found it, thanks.
+
+
+[09/07/2023 01:44] doogiedog
+G-21 to G-24 from the bot report are gas optimizations related to using assembly. Anyone know how much gas would actually be saved by using assembly in those instances?
+
+
+[09/07/2023 04:07] albertwh1te
+This is usefull !
+
+
+[09/07/2023 04:33] jovi6132
+Happy to help 🙂
+
+
+[09/07/2023 06:20] doogiedog
+@foobar How does the system handle the case where I have delegated an NFT from my hardware wallet to a hot-wallet, and my hot-wallet gets hacked and everything in it stolen?
+
+
+[09/07/2023 06:44] 0xarno
+ig users have to transfer their nfts to escrow contract before receiving delegation rights
+
+
+[09/07/2023 06:49] foobar0x
+Assets are stored in the cold wallet, not the hot wallet. So hot wallet getting hacked doesn't affect things
+
+
+[09/07/2023 08:01] doogiedog
+The principal token is minted to the cold wallet and the delegate token is minted to the hot wallet?
+
+{Reactions}
+👍🏼 (3) 
+
+[09/07/2023 11:45] albertwh1te
+I met tons of erros , when exeucte `forge test`. 
+Is there something I am doing wrong ?
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/image-612C3.png
+
+
+[09/07/2023 11:53] zdravkohr
+Have you installed the submodules?
+
+
+[09/07/2023 12:10] albertwh1te
+I have done that
+
+
+[09/07/2023 12:23] 0xhelium
+Delete everything and reclone the repo
+
+
+[09/07/2023 12:23] albertwh1te
+Thanks.
+
+
+[09/07/2023 12:23] 0xlamide#0986
+Yea.. This should work
+
+
+[09/07/2023 12:29] albertwh1te
+Amazing.
+"Delete everything and reclone the repo" just works!
+
+
+[09/07/2023 12:42] zdravkohr
+What is the purpose of **ERC1155_PULLED** and **ERC1155_NOT_PULLED**
+
+
+[09/07/2023 12:45] sp1cymeatball
+@foobar hey! What are the `delegationInfo.rights`?
+
+
+[09/07/2023 12:46] albertwh1te
+for reentrancy protect
+
+
+[09/07/2023 12:46] albertwh1te
+"" or "flashloan"
+
+
+[09/07/2023 12:46] fulum
+If I undestand well, it's a state to say the ERC1155 is pulled on the DelegateToken, and if it's Pulled,you cant pull another
+
+
+[09/07/2023 12:48] sp1cymeatball
+only two types?
+
+
+[09/07/2023 12:48] hym.
+which contract is the escrow contract where users deposit NFTS ?
+
+
+[09/07/2023 12:48] zdravkohr
+How would reentrancy happen if the callback is in the DelegateToken contract?
+
+
+[09/07/2023 12:48] zdravkohr
+DelegateToken
+
+
+[09/07/2023 12:50] hym.
+can't seem to find it in the repo, where's that ?
+
+
+[09/07/2023 12:50] zdravkohr
+Sorry, DelegateToken
+
+
+[09/07/2023 12:51] albertwh1te
+src/DelegateToken.sol
+
+
+[09/07/2023 12:51] hym.
+ah ok thx
+
+
+[09/07/2023 12:53] albertwh1te
+I haven't finished reviewing the entire codebase. However, as far as I'm aware, there are only two types.
+
+{Reactions}
+thankyou 
+
+[09/07/2023 12:57] fulum
+dm you @foobar
+
+
+[09/07/2023 14:50] mussucal
+Why i cannot draw an inheritance graph for the file DelegateRegistry.sol  in VScode using surya ??
+
+
+[09/07/2023 15:02] asui0944
+What will delegateInfo.rights determine when calling create
+
+
+[09/07/2023 15:06] jovi6132
+Read this: https://docs.delegate.xyz/delegate/upgrade-to-v2/subdelegations#simple-approach
+
+{Embed}
+https://docs.delegate.xyz/delegate/upgrade-to-v2/subdelegations
+Subdelegations
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/6v2zSi3hd11TeQPLb8yk-949C2.png
+
+{Reactions}
+👍 
+
+[09/07/2023 17:04] foobar0x
+This refers to subdelegations, where users can split up the rights associated with a single token into multiple delegations. See more info here: https://docs.delegate.xyz/delegate/upgrade-to-v2/subdelegations
+
+{Embed}
+https://docs.delegate.xyz/delegate/upgrade-to-v2/subdelegations
+Subdelegations
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/6v2zSi3hd11TeQPLb8yk-949C2.png
+
+{Reactions}
+👀 (2) 
+
+[09/07/2023 17:05] foobar0x
+Flashloan lets the owner of the DelegateToken flashloan the escrowed spot asset. This is useful if a project hasn't integrated Delegate support but you still want to access a token-gated claim
+
+{Reactions}
+🔥 (4) 
+
+[09/07/2023 21:45] jovi6132
+Dmed you @foobar 🙂
+
+
+[09/08/2023 04:24] hisoul22
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/Screenshot_2023-09-08_at_12.24.48-D251F.png
+
+
+[09/08/2023 04:25] hisoul22
+Why are state variables read and stored in this way?
+
+
+[09/08/2023 04:26] hisoul22
+why not use a hash map?
+
+
+[09/08/2023 04:27] hisoul22
+quite confused
+
+{Stickers}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/773903633951490098-BDFDF.png
+
+
+[09/08/2023 04:33] hisoul22
+to save gas? i guess
+
+{Reactions}
+👍 
+
+[09/08/2023 04:44] 0x11singh99
+On which chain these contracts are going to be deployed ? @foobar
+
+
+[09/08/2023 05:05] doogiedog
+That adds so much complexity for such a little return no?
+
+
+[09/08/2023 05:07] hisoul22
+I am not sure
+
+
+[09/08/2023 06:34] dimulski
+can you give an example of what rights may look like an input ```function delegateAll(address to, bytes32 rights, bool enable)```
+
+
+[09/08/2023 06:34] dimulski
+@foobar
+
+
+[09/08/2023 07:10] parsely.
+Can't say for sure, but I was reading the documentation and it mentioned that perhaps a use case would be  rights = "governance" meaning the governance rights were delegated. I may be wrong but I think that may be an example
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/Screenshot_from_2023-09-08_09-10-14-FF258.png
+
+{Reactions}
+👌 
+
+[09/08/2023 14:15] foobar0x
+gas efficiency
+
+
+[09/08/2023 14:15] foobar0x
+Simplest example here would be the empty bytestring `""` representing all rights, otherwise the complex example being a string like `"governance"` to scope more narrowly
+
+{Reactions}
+👌 (3) 
+
+[09/08/2023 14:16] foobar0x
+many EVM chains
+
+{Reactions}
+👍 (2) 
+
+[09/08/2023 14:16] foobar0x
+it adds giant improvements from eliminating whole storage slots from needing to be written
+
+
+[09/08/2023 15:38] yashar0x
+Hey @foobar , according to docs, delegate token will be burned after expiry
+Which function will burn the delegate token?
+
+
+[09/08/2023 16:30] stoicov12
+Dmed @foobar  🙂
+
+
+[09/08/2023 17:17] fulum
+dm you @foobar
+
+
+[09/08/2023 17:37] foobar0x
+withdraw()
+
+
+[09/08/2023 20:19] doogiedog
+Have you analyzed just how much gas you are actually saving by doing this vs a much simpler approach?
+
+
+[09/08/2023 20:22] foobar0x
+Yes
+
+
+[09/08/2023 20:24] tumelo_crypto
+which contract handles deposit and withdrawal of nfts/token in escrow?
+
+
+[09/08/2023 20:24] foobar0x
+DelegateToken
+
+
+[09/08/2023 20:25] tumelo_crypto
+okay thanks
+
+
+[09/08/2023 20:54] tumelo_crypto
+Just to confirm that I understand the flow process, if I want to deposit 1 eth and sell flashloan rights as a delegate nft,
+Would i then use  the create() function and after expiry use withdraw()
+
+
+[09/08/2023 21:06] foobar0x
+You wouldn't really deposit ETH, you would deposit an NFT or an ERC20
+
+
+[09/08/2023 21:07] foobar0x
+But yes
+
+
+[09/08/2023 21:11] tumelo_crypto
+sorry meant to say weth, but i understand
+
+
+[09/09/2023 15:37] mlome
+What is the "rights" supposed to be in the hashes?
+
+
+[09/09/2023 15:40] parsely.
+This response from the sponsor may help guide: https://discord.com/channels/810916927919620096/1146942331258425455/1149709722094669934
+
+{Reactions}
+🫡 
+
+[09/09/2023 16:52] daniel526
+@foobar  is terribly good at what he does 🥸
+
+{Reactions}
+❤️ (2) 
+
+[09/09/2023 17:11] .satyam_
+@foobar dmed you
+
+
+[09/09/2023 17:12] yashar0x
+Yeah, Indeed
+Well-structured, well-designed and well-tested contracts 👍
+
+{Reactions}
+👍 
+
+[09/09/2023 17:32] zdravkohr
+How is the CreateOfferer supposed to work?
+
+
+[09/09/2023 17:35] foobar0x
+It's a Seaport ContractOfferer as described here: https://github.com/ProjectOpenSea/seaport/blob/main/docs/SeaportDocumentation.md#contract-orders
+
+Lets people list a spot asset for sale with a gasless signature, and if it is bought then the CreateOfferer will automatically wrap it into a DelegateToken, deliver the DT to the buyer, and deliver the PT to the seller
+
+{Embed}
+https://github.com/ProjectOpenSea/seaport/blob/main/docs/SeaportDocumentation.md
+seaport/docs/SeaportDocumentation.md at main · ProjectOpenSea/seaport
+Seaport is a marketplace protocol for safely and efficiently buying and selling NFTs. - ProjectOpenSea/seaport
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/seaport-8A55B
+
+{Reactions}
+❤️ (2) 👍 (2) 
+
+[09/09/2023 17:41] foobar0x
+Hey, wanted to clarify: the lone // TODO comment in DelegateRegistry.sweep() is not in scope. Known and one that can't be finalized until post-audit because of how CREATE2 address mining works
+
+{Reactions}
+👍 
+
+[09/09/2023 17:42] yashar0x
+@foobar dmed you ser
+
+
+[09/09/2023 17:42] foobar0x
+And although the registry supports multiple subdelegations, the DelegateToken implementation is only meant to support a single delegation or subdelegation at a time.
+
+{Reactions}
+🫡 (2) 
+
+[09/09/2023 17:59] mussucal
+@foobar What purpose do functions rescind() and withdraw() serve ??
+
+
+[09/09/2023 19:10] foobar0x
+Recommend reading the natspec comments for each of the functions
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/Screenshot_2023-09-09_at_3.09.49_PM-21439.png
+
+
+[09/09/2023 19:10] zdravkohr
+It's a part of the contracts
+
+
+[09/09/2023 19:10] 836541#7294
+In Registry v2, "to" is the delegation wallet ? Beautiful written code btw
+
+
+[09/09/2023 19:14] ladboy233
+wait what
+
+
+[09/09/2023 19:16] yashar0x
+Both delegate token and principal token are ERC721
+
+
+[09/09/2023 19:19] yashar0x
+I don't think so
+
+
+[09/09/2023 19:21] yashar0x
+principal token contract has some specific functions like _checkDelegateTokenCaller 
+So it can't be any NFT
+
+
+[09/09/2023 19:21] ladboy233
+Sorry
+
+
+[09/09/2023 19:21] ladboy233
+sorry
+
+
+[09/09/2023 19:21] jovi6132
+From what I understood, the principal is a single contract that holds tokens than can be used to withdraw escrowed assets. You burn your principal token and get back the erc20/erc721/erc1155 you've escrowed by creating the initial delegation
+
+
+[09/09/2023 19:21] ladboy233
+my bad
+
+
+[09/09/2023 19:21] ladboy233
+I saw it
+
+
+[09/09/2023 19:21] ladboy233
+lol
+
+
+[09/09/2023 19:21] ladboy233
+thanks
+
+{Reactions}
+🙏 (2) 
+
+[09/09/2023 19:23] yashar0x
+Yeah exactly
+
+
+[09/09/2023 19:28] parsely.
+Your question made me check something in the code.... (EDITED AS REQUESTED)
+
+
+[09/09/2023 19:30] yashar0x
+It made me check this out too 😄
+
+{Reactions}
+🫡 
+
+[09/09/2023 19:31] fulum
+Interesting things
+
+
+[09/09/2023 19:32] fulum
+@foobar You code all the contract alone or you are a team?
+
+
+[09/09/2023 19:33] foobar0x
+Me & a teammate
+
+{Reactions}
+10_10 (7) 
+
+[09/09/2023 19:34] yashar0x
+Ser would you please check the DM?
+
+
+[09/09/2023 19:37] ladboy233
+:10_10:
+
+
+[09/09/2023 19:38] parsely.
+@0xladboy | Sparkware Edited as requested
+
+
+[09/09/2023 19:39] ladboy233
+Thank you!
+
+{Reactions}
+hi5 (2) 
+
+[09/09/2023 19:39] ladboy233
+🙏 :10_10: :nice: :hi5:
+
+
+[09/09/2023 20:11] foobar0x
+Getting lots of questions about the flows of depositing and redeeming tokens from escrow. Clarifying below:
+
+**DelegateToken**: is a singleton contract that escrows all spot assets. Also issues new ERC721s representing ownership of the delegation rights for a fixed period of time, known as Delegate Tokens (DTs).
+**PrincipalToken**: is a singleton contract that does not escrow any spot assets and can only be called from the DT contract, cannot be interacted with on its own. For every DT issued, a Principal Token (PT) ERC721 is issued that represents right to claim escrowed spot assets once the DT has expired.
+
+*create()*: is how new DTs and PTs are created
+*extend()*: lets the PT owner (not the DT owner) choose to extend the expiration time for an existing DT
+*rescind()*: lets the DT owner (not the PT owner) return the DT to the PT holder early. or after the DT has expired, anyone can call this method. this does not release the spot asset from escrow, it merely cancels out the DT.
+*withdraw()*: lets the PT owner burn the PT and claim the spot asset from escrow. only the PT owner can do this, because if the PT owner is a smart contract then we could see griefing attacks where spot assets get stuck in unrecoverable PT owner addresses. PT owner can authorize others to call this on their behalf, and if PT owner also owns the DT then they can skip calling rescind and go straight to withdraw
+
+{Reactions}
+👍 (14) 
+
+[09/09/2023 20:17] fulum
+i dm you @foobar when you have time 👍
+
+
+[09/10/2023 12:50] jaimebarrancos
+When running forge test I'm getting Unknown version provided and I have ran foundryup, anyone know a fix?
+
+
+[09/10/2023 13:42] debofx
+Foundry.toml>change version to 8.19.
+
+
+[09/10/2023 15:31] jaimebarrancos
+That causes the error: Source file requires different compiler version:
+pragma solidity ^0.8.21;
+
+{Reactions}
+👍 
+
+[09/10/2023 17:42] fulum
+I dm you @foobar
+
+
+[09/10/2023 18:03] lsaudit
+When exactly withdraw() should be called? When token has expired, or when token has not expired yet?
+
+
+[09/10/2023 18:20] yashar0x
+Only PT holder can call this function
+If the PT holder owns the DT too, he will be able to call withdraw() anytime (before expiry) 
+But in the case when DT holder is another person, PT holder should wait until block.timestamp > expiry
+
+
+[09/10/2023 18:20] lsaudit
+thank you!
+
+{Reactions}
+👍 
+
+[09/10/2023 23:47] debofx
+I used floating pragma for all the contracts with find and replace. E.g. pragma...^0.8.16;
+
+
+[09/11/2023 01:54] drynooo
+I dm you @foobar
+
+
+[09/11/2023 10:38] josephdara
+Hi @foobar , I sent a dm
+
+
+[09/11/2023 11:58] mlmochi
+Hi @foobar  can I also dm you for a question?
+
+
+[09/11/2023 12:17] 0xhuy0512
+anyone know what's the use case of call directly to `DelegateRegistry`?
+
+
+[09/11/2023 13:22] sp1cymeatball
+Call multiple functions within a single transaction
+
+
+[09/11/2023 13:24] 0xhuy0512
+but what for tho? It doesn't mint Delegate and Principal token
+
+
+[09/11/2023 13:27] sp1cymeatball
+I believe it was made for utility, `DelegateToken.sol` is not the only contract that would interact with the registry
+
+
+[09/11/2023 13:29] sp1cymeatball
+oh my bad, I thought you were asking about the `multicall` function inside the registry
+
+
+[09/11/2023 14:13] fulum
+@foobar I dm you if you are available
+
+
+[09/11/2023 14:52] prott00n#2382
+You can think of it as there are three separate protocols:
+- DelegateRegistry that allows managing delegations
+- Liquid Delegation with DelegateToken and PrincipalToken that tokenizes these delegations and you can sell them etc
+- ContractOfferer which is meant to handle integration with seaport for gasless selling/buying  for these liquid delegations
+
+That means that the core is DelegateRegistry, on top there is Liquid Delegation built and on top of that ContractOfferer. Reasonable auditing order would be starting with DelegateRegistry, then Liquid Delegation and finally ContractOfferer. That being said since I reviewed most of it, it feels that the actual vulns will be in ContractOfferer, unfortunately there is very little information about it, even from seaport how does it work, how functions are called which makes things very difficult to understand.
+
+I feel this audit should be just a little bit longer, because its quite complex and once you get to the level that you understand how the protocol works the audit is about to finish.
+
+{Reactions}
+👍🏼 (3) 
+
+[09/11/2023 15:33] fulum
+I agree, it's tricky to understand certains things with Seaport, the tests for CreateOffered present in the repo help a lot to understand how it should work
+
+
+[09/11/2023 15:35] prott00n#2382
+Ye definitely it does help but even though its still blurry to me, especially that there seems to be used some kind of trick/hack by implementing `transferFrom` in ContractOfferer and then requiring it to be fulfilled as a part of the order in `consideration`
+
+
+[09/11/2023 15:42] fulum
+I understand the behaviour of the process is not very instinctive, If I understand correctly, the user use the CreateOfferer to help to making the hash for the transaction, and user (I think it's implemented on the front end of the website) have to call `seaport.matchAdvancedOrders`, the process inside is (generateOrder --> custom transferFrom in CreateOfferer --> ratifyOrder)
+
+
+[09/11/2023 15:49] prott00n#2382
+Ye the confusing part for me is that in `transferFrom` the CreateOfferer has to delegate the ERC721/ERC20/ERC1155 through `DelegateToken` to receive DelegateToken that is sold to the buyer and the `PrincipalToken` that is sent to the seller. This means that there is time at which the ERC721/ERC20/ERC1155 are owned by CreateOfferer so they can be pushed to `DelegateToken` escrow. That part is somehow done by SeaPort that uses `conduit` to transfer ERC721/ERC20/ERC1155 from seller to `CreateOfferer` and later triggers `transferFrom` of `CreateOfferer` which delegates it.
+
+
+[09/11/2023 16:05] fulum
+In this case I think the ERC721/ERC20/ERC1155 don't go in CreateOfferer, the CreateOfferer force the user to send it directly in DelegateToken with DelegateToken::create triggered in the CreateOfferer::transferFrom
+
+
+[09/11/2023 16:12] prott00n#2382
+Well the thing is that `create` always pulls the stuff from `msg.sender` which in that case is `CreateOfferer`
+
+
+[09/11/2023 16:17] prott00n#2382
+You can actually see that in the test suite there is a `ConsiderationItem` for ERC721/ERC20/ERC1155 that the recipient is `CreateOfferer`.
+
+
+[09/11/2023 16:28] nethoxa
+your server seems to not be working
+
+{Attachments}
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/image-B5A4B.png
+
+
+[09/11/2023 16:29] nethoxa
+@here @Jay | C4 @CloudEllie
+
+
+[09/11/2023 16:29] itsmetechjay
+will DM you
+
+
+[09/11/2023 16:36] fulum
+good point on it 🧐
+
+
+[09/11/2023 16:39] 0x11singh99
+Something went wrong editing submission.
+
+Try again   @Jay | C4
+
+
+[09/11/2023 16:42] itsmetechjay
+There might be something cached with your original submission - can you try again?
+
+
+[09/11/2023 16:42] itsmetechjay
+@0x11singh99 if you still have issue - dm me please
+
+
+[09/11/2023 16:47] 0x11singh99
+now submittted
+
+
+[09/11/2023 16:47] itsmetechjay
+did you just have to wait? Or did you find something wrong?
+
+
+[09/11/2023 16:49] foobar0x
+Great explainer
+
+
+[09/11/2023 16:51] 0x11singh99
+previously  this error came  `Something went wrong editing submission.`    
+but now it doesn't
+
+
+[09/11/2023 16:53] itsmetechjay
+Ok got it - thank you.
+
+{Reactions}
+👍 
+
+[09/11/2023 16:58] fulum
+@foobar  can you give us some explanations on this side ?
+
+
+[09/11/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Delegate** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+hi5 (6) C4Keycap 
+
+[09/11/2023 20:25] hisoul22
+How many issues submitted?
+
+
+[09/11/2023 21:40] fulum
+good luck everyone :hi5:
+
+{Reactions}
+hi5 (3) 
+
+[09/11/2023 23:26] kaveyjoe
+367
+
+
+[09/12/2023 02:26] hisoul22
+@kaveyjoe  thanks
+
+
+[09/12/2023 04:08] 0xhelium
+anyone here ? 
+In foundry test how Can i make an input fixed using chat codes ?
+Eg: i want to make a uint256 input to be 1200.
+
+
+[09/12/2023 04:13] eme0242
+no need to accept input then,
+just set a var to 1200 within the function, and use the var throughout the function
+
+{Reactions}
+👍 
+
+[09/12/2023 06:44] parsely.
+I aggree with @Emmanuel 's answer below, but for extra information if you do ever want to limit fuzz test inputs you can use `assume` and `bound` https://book.getfoundry.sh/cheatcodes/assume
+
+{Embed}
+https://book.getfoundry.sh/cheatcodes/assume
+Foundry Book
+A book on all things Foundry
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/card-24F4E.png
+
+{Reactions}
+👍 (3) 👀 
+
+[10/09/2023 03:04] pfapostol
+Should be soon. The escalation has already been completed.
+
+
+[10/09/2023 06:03] 0xarmedgoose
+how can one participate in escalations? is it also for backstage role only?
+
+{Reactions}
+👍 
+
+[10/09/2023 06:40] pfapostol
+yes
+
+{Reactions}
+👍 
+
+[10/09/2023 07:02] 0xarmedgoose
+thx
+
+
+[10/09/2023 10:06] ladboy233
+soon
+
+{Reactions}
+🔥 (5) 
+
+[10/09/2023 16:17] hunter_w3b
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+
+{Embed}
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/waiting-waiting-patiently-264C9.png
+
+
+[10/09/2023 16:25] 0xnevi
+Good work ser u will do aheem good 😀
+
+{Reactions}
+10_10 (2) 👍 (2) 
+
+[10/13/2023 12:20] _paperparachute
+🤑 🎉  Awards for **Delegate**:
+
+$17,158.88 USDC » @0xladboy | Sparkware 
+$17,118.75 USDC » @d4r3d3v1l 
+$1,118.51 USDC » @DadeKuma 
+$927.61 USDC » @pfapostol 
+$586.41 USDC » @Sathish9098 
+$451.09 USDC » Baki (@supernova, @Viraz) 
+$311.51 USDC » @p0wd3r 
+$216.92 USDC » @Banditx0x 
+$216.92 USDC » @m4ttm 
+$40.13 USDC » @lodelux 
+$40.13 USDC » @lsaudit 
+$40.13 USDC » @kodyvim 
+$40.13 USDC » @Brenzee 
+$40.13 USDC » @sces60107 | GimelSec 
+$40.13 USDC » @Fulum 
+$40.13 USDC » @gkrastenov 
+
+🏁 Findings summary
+--------------------------------------—
+High risk findings: 0
+Med risk findings: 2 unique (2 total)
+Gas reports: 2 total (Best: @Sathish9098) 
+QA reports: 10 total (Best: @DadeKuma)
+Advanced analysis reports: (Best: @pfapostol) 
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+
+[10/13/2023 12:21] fulum
+Good job @0xladboy | Sparkware & @d4r3d3v1l for your findings 🥳
+
+{Reactions}
+🔥 (6) 
+
+[10/13/2023 12:24] ladboy233
+thanks
+
+
+[10/13/2023 12:24] ladboy233
+why not in announcement channel？
+
+
+[10/13/2023 12:24] supernovahs
+Congrats ladboy
+
+
+[10/13/2023 12:25] sathish9098kumar
+Congrats @0xladboy | Sparkware
+
+
+[10/13/2023 12:26] _paperparachute
+Because contrary to popular belief, I'm a human, and can't move that fast 🙂 https://discord.com/channels/810916927919620096/810929015509483554/1162365576132440105
+
+{Reactions}
+🤖 (8) 🧑‍💻 (4) 
+
+[10/13/2023 12:26] supernovahs
+That's the game
+
+
+[10/13/2023 12:26] sathish9098kumar
+First time in top 5 ☺️
+
+{Reactions}
+dance_vibe (10) 
+
+[10/13/2023 12:26] ladboy233
+srry
+
+
+[10/13/2023 12:27] ladboy233
+thanks！
+
+{Reactions}
+😎 (2) 
+
+[10/13/2023 12:37] nethoxa
+I'm fairly impressed. As it was a short one, may I ask you an approximate deadline for the report?
+
+
+[10/13/2023 12:42] _paperparachute
+1-2 weeks!
+
+{Reactions}
+🔥 
+
+[10/13/2023 13:14] nethoxa
+Perfect
+
+
+[10/13/2023 13:24] saint6704
+Congrats ser
+
+{Reactions}
+👍 (2) 
+
+[10/13/2023 13:31] hunter_w3b
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+
+{Embed}
+https://tenor.com/view/waiting-waiting-patiently-waiting-for-you-waiting-on-you-gif-15489516379864441176
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/waiting-waiting-patiently-264C9.png
+
+{Reactions}
+🥲 
+
+[10/13/2023 13:38] _paperparachute
+Rewards are posted above.
+
+{Reactions}
+😢 (4) 
+
+[10/13/2023 14:08] d4r3d3v1l
+thanks
+
+
+[10/13/2023 14:09] saq_143
+https://tenor.com/view/the-simpsons-homer-simpson-good-gif-126191627745920871
+
+{Embed}
+https://tenor.com/view/the-simpsons-homer-simpson-good-gif-126191627745920871
+Code4rena - ARCHIVE-Q3-2023 - delegate-sep05 [1146942331258425455].txt_Files/the-simpsons-052E8.png
+
+
+[10/13/2023 14:10] bronze_pickaxe
+congrats 🫡
+
+{Reactions}
+👍 
+
+[10/13/2023 14:31] 0xsmartcontractsamurai
+Err, looks like all my submissions for the Delegate contest were completely ignored/skipped...and several of them (gas, QA, Medium) are likely valid...
+
+Just checking to see for any reason why?
+
+Unless I'm seeing things...👀 
+
+Did I forget to submit my analysis report or did I submit one and it was 💩 ?
+
+Please let me know...
+
+It's a great learning experience each contest but if I've got valid submissions, then not cool.
+
+{Reactions}
+👀 
+
+[10/13/2023 14:34] Banditx0x#5323
+Hmm it seems likely you would have gotten at least $1 in rewards from a gas/QA
+
+{Reactions}
+👍 (2) 
+
+[10/13/2023 14:37] jovi6132
+Nice finding @0xladboy | Sparkware 🔥
+
+{Reactions}
+🫡 
+
+[10/13/2023 14:39] _paperparachute
+When the report is published and the repo made public, you'll be able to check your submissions 🙂
+
+
+[10/13/2023 14:52] 0xsmartcontractsamurai
+Yup I know, 100% cool when you're not sure whether you have valid findings or not, but in this case I'm pretty sure I do have some valid findings...
+
+If valid findings were skipped intentionally/unintentionally for whatever reasons, I think that should be made public, the details, for transparency.
+
+If a warden submits a bad analysis report or no analysis report, or for whatever other reason their submissions are totally ignored, definitely there should be a way for the warden/public to see that info/reasons. 
+
+Besides transparency, will also help with the feedback loop.
+
+{Reactions}
+👍🏻 (10) 
+
+[10/13/2023 15:05] dadekuma
+you can find your issues on Github after the report is published, even if they aren't included in the final report
+
+{Reactions}
+👍 
+
+[10/13/2023 15:06] dadekuma
+otherwise you can get backstage access so you can check them after the contest is finished
+
+{Reactions}
+👍 
+
+[10/13/2023 15:35] jvorex
+keep your head up buddy
+
+{Reactions}
+👍 
+
+[10/13/2023 15:49] orion4105
+congrats
+
+
+[10/13/2023 15:49] koolexc
+@0xladboy | Sparkware congrats 👏
+
+{Reactions}
+👍 
+
+[10/13/2023 17:42] nobody2018
+@0xladboy | Sparkware Congrats 👏👍
+
+{Reactions}
+👀 
+
+[10/13/2023 20:14] 0xvj
+@d4r3d3v1l started grinding in the first contest itself 🥳🫡
+
+
+[10/13/2023 20:49] d4r3d3v1l
+:hi5:
+
+
+[10/13/2023 20:51] naina4934
+@d4r3d3v1l LFG mate 🥳 😅
+
+{Reactions}
+🫡 (2) ❤️ (2) 
+
+[10/14/2023 14:43] foobar0x
+Thanks everyone for your hard work! Especially to @0xladboy | Sparkware and @d4r3d3v1l for teasing out tricky unique Mediums
+
+{Reactions}
+🫡 (9) 🔥 (9) 🙌 (2) 
+
+==============================================================
+Exported 251 message(s)
+==============================================================
